@@ -1,0 +1,47 @@
+<svg width="673" height="593" viewBox="0 0 673 593" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-2" y="0" width="675" height="594">
+<path d="M167.25 444.932L251.42 395.637V296.955" stroke="black" stroke-miterlimit="10"/>
+<path d="M251.42 395.636L335.5 444.932" stroke="black" stroke-miterlimit="10"/>
+<path d="M167.25 444.932V346.341L251.42 296.955L335.5 346.341V444.932L251.42 494.319L167.25 444.932Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M335.5 346.342L251.42 395.637V494.319" stroke="black" stroke-miterlimit="10"/>
+<path d="M251.42 395.637L167.25 346.342" stroke="black" stroke-miterlimit="10"/>
+<path d="M503.75 444.932L587.92 395.637V296.955" stroke="black" stroke-miterlimit="10"/>
+<path d="M587.92 395.636L672 444.932" stroke="black" stroke-miterlimit="10"/>
+<path d="M503.75 444.932V346.341L587.92 296.955L672 346.341V444.932L587.92 494.319L503.75 444.932Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M672 346.342L587.92 395.637V494.319" stroke="black" stroke-miterlimit="10"/>
+<path d="M587.92 395.637L503.75 346.342" stroke="black" stroke-miterlimit="10"/>
+<path d="M503.75 247.66L587.92 198.273V99.5913" stroke="black" stroke-miterlimit="10"/>
+<path d="M587.92 198.272L672 247.659" stroke="black" stroke-miterlimit="10"/>
+<path d="M503.75 247.66V148.978L587.92 99.5913L672 148.978V247.66L587.92 296.955L503.75 247.66Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M672 148.977L587.92 198.272V296.954" stroke="black" stroke-miterlimit="10"/>
+<path d="M587.92 198.273L503.75 148.977" stroke="black" stroke-miterlimit="10"/>
+<path d="M503.75 148.977L587.92 99.5909V1" stroke="black" stroke-miterlimit="10"/>
+<path d="M587.92 99.5913L672 148.978" stroke="black" stroke-miterlimit="10"/>
+<path d="M503.75 148.977V50.2954L587.92 1L672 50.2954V148.977L587.92 198.273L503.75 148.977Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M672 50.2959L587.92 99.5913V198.273" stroke="black" stroke-miterlimit="10"/>
+<path d="M587.92 99.5914L503.75 50.2959" stroke="black" stroke-miterlimit="10"/>
+<path d="M167.25 247.66L251.42 198.273V99.5913" stroke="black" stroke-miterlimit="10"/>
+<path d="M251.42 198.272L335.5 247.659" stroke="black" stroke-miterlimit="10"/>
+<path d="M167.25 247.66V148.978L251.42 99.5913L335.5 148.978V247.66L251.42 296.955L167.25 247.66Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M335.5 148.977L251.42 198.272V296.954" stroke="black" stroke-miterlimit="10"/>
+<path d="M251.42 198.273L167.25 148.977" stroke="black" stroke-miterlimit="10"/>
+<path d="M335.5 543.613L419.67 494.318V395.636" stroke="black" stroke-miterlimit="10"/>
+<path d="M419.67 494.318L503.75 543.614" stroke="black" stroke-miterlimit="10"/>
+<path d="M335.5 543.614V444.932L419.67 395.636L503.75 444.932V543.614L419.67 593L335.5 543.614Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M503.75 444.932L419.67 494.318V593" stroke="black" stroke-miterlimit="10"/>
+<path d="M419.67 494.319L335.5 444.932" stroke="black" stroke-miterlimit="10"/>
+<path d="M-1 543.613L83.1698 494.318V395.636" stroke="black" stroke-miterlimit="10"/>
+<path d="M83.17 494.318L167.25 543.614" stroke="black" stroke-miterlimit="10"/>
+<path d="M-0.910767 543.614V444.932L83.1694 395.636L167.25 444.932V543.614L83.1694 593L-0.910767 543.614Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M167.25 444.932L83.17 494.319V593" stroke="black" stroke-miterlimit="10"/>
+<path d="M83.1699 494.319L-0.910278 444.932" stroke="black" stroke-miterlimit="10"/>
+<path d="M335.5 346.341L419.67 296.954V198.272" stroke="black" stroke-miterlimit="10"/>
+<path d="M419.67 296.955L503.75 346.341" stroke="black" stroke-miterlimit="10"/>
+<path d="M335.5 346.341V247.659L419.67 198.272L503.75 247.659V346.341L419.67 395.636L335.5 346.341Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M503.75 247.659L419.67 296.955V395.636" stroke="black" stroke-miterlimit="10"/>
+<path d="M419.67 296.955L335.5 247.659" stroke="black" stroke-miterlimit="10"/>
+</mask>
+<g mask="url(#mask0)">
+<rect y="-12.9976" width="673.031" height="489.92" fill="#C0C4EB"/>
+</g>
+</svg>

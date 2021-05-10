@@ -1,49 +1,82 @@
+const stringSplitContentTypes = str => str.split(/[, \n\r]/g).filter(x => !!x);
+
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-  },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+    siteMetadata: {
+        title: `Moms' House và Babies' House`,
+        description: `momshouse, babieshouse, Moms' House và Babies' House, momshouseandbabieshouse, momshouse va babieshouse,momshousevababieshouse`,
+        author: `momshouse, babieshouse`,
     },
-    {
-      resolve: 'gatsby-source-strapi',
-      options: { 
-        apiURL: process.env.DEPLOY_URL
-        ? "https://momshouseandbabieshouse.herokuapp.com"
-        : "http://localhost:1337",
-        contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          'article',
-          'user'
-        ],
-        queryLimit: 1000,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
-}
+    plugins: [
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/gatsby-config.js`,
+            },
+        },
+        {resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: /\.inline\.svg$/
+                }
+            }
+        },
+        // Strapi GQL
+        {
+            resolve: `gatsby-source-strapi`,
+            options: {
+                apiURL: process.env.TW_WEBSITE_API_URL || `http://web-cms:1337`,
+                contentTypes: stringSplitContentTypes(
+                    process.env.TW_WEBSITE_CMS_CONTENT_TYPES ||
+                        `
+                            articles,
+                            blogs
+                        `,
+                ),
+                singleTypes: stringSplitContentTypes(
+                    process.env.TW_WEBSITE_CMS_SINGLE_TYPES ||
+                        `
+                            top-menu,
+                            page-home,
+                        `,
+                ),
+            },
+        },
+        `gatsby-plugin-react-helmet`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `TradeWindow.io`,
+                short_name: `TradeWindow`,
+                start_url: `/`,
+                background_color: `#663399`,
+                theme_color: `#663399`,
+                display: `minimal-ui`,
+                // TODO: TradeWindow icon
+                icon: `src/images/momshouse-ico.png`,
+            },
+        },
+        `gatsby-plugin-typescript`,
+        {
+            resolve: `gatsby-plugin-emotion`,
+            options: {
+                sourceMap: true,
+                autoLabel: 'dev-only',
+                labelFormat: `[local]`,
+                cssPropOptimization: true,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-google-fonts`,
+            options: {
+                fonts: [`Poppins:wght@400;700`,`Lobster:wght@400;700`],
+                display: 'swap',
+            },
+        },
+        // this (optional) plugin enables
+        // Progressive Web App + Offline functionality
+        // To learn more, visit: https://gatsby.dev/offline
+        // `gatsby-plugin-offline`,
+    ],
+};

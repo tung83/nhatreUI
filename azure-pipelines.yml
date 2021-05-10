@@ -1,0 +1,14 @@
+trigger:
+    - devops
+
+pool:
+    vmImage: 'ubuntu-latest'
+
+steps:
+    - script: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+          npm run docker
+      displayName: 'Build and publish image'
+      env:
+          DOCKER_USER: $(DOCKER_USER)
+          DOCKER_PASSWORD: $(DOCKER_PASSWORD)
