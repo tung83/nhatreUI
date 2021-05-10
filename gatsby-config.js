@@ -3,6 +3,7 @@ const stringSplitContentTypes = str => str.split(/[, \n\r]/g).filter(x => !!x);
 module.exports = {
     siteMetadata: {
         title: `Moms' House và Babies' House`,
+        // eslint-disable-next-line max-len
         description: `momshouse, babieshouse, Moms' House và Babies' House, momshouseandbabieshouse, momshouse va babieshouse,momshousevababieshouse`,
         author: `momshouse, babieshouse`,
     },
@@ -24,7 +25,8 @@ module.exports = {
         {
             resolve: `gatsby-source-strapi`,
             options: {
-                apiURL: process.env.TW_WEBSITE_API_URL || `http://web-cms:1337`,
+                // eslint-disable-next-line max-len
+                apiURL: process.env.TW_WEBSITE_API_URL || `https://momshouseandbabieshouse.herokuapp.com`,
                 contentTypes: stringSplitContentTypes(
                     process.env.TW_WEBSITE_CMS_CONTENT_TYPES ||
                         `
