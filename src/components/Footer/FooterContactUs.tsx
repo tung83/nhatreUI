@@ -95,7 +95,7 @@ const FooterContactUs: React.FC<Props> = () => {
                     Minimise <span className="text-highlight">Cost</span>
                 </TitleText>
                 <BodyTag className="body-24">
-                    Contact us to learn how TradeWindow can help you see trade
+                    Contact us to learn how Momshouse can help you see trade
                     differently.
                 </BodyTag>
                 <DemoButtonWrapper>
