@@ -1,7 +1,6 @@
 export const PRODUCT_DETAIL_CUSTOMER_TITLE = 'Customers we work with';
-export const PRODUCT_DETAIL_BUSINESS_TYPE_TITLE =
-    'TradeWindow for your industry';
-export const PRODUCT_DETAIL_BUSINESS_TYPE_SUBTITLE = `TradeWindow 
+export const PRODUCT_DETAIL_BUSINESS_TYPE_TITLE = 'Momshouse for your industry';
+export const PRODUCT_DETAIL_BUSINESS_TYPE_SUBTITLE = `Momshouse 
 solutions are proven across some of the worlds most safety, 
 security and time-critical export sectors. 
 They can be adapted to almost any export/import sector.`;

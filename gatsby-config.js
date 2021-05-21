@@ -49,13 +49,13 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `TradeWindow.io`,
-                short_name: `TradeWindow`,
+                name: `Momshouse.io`,
+                short_name: `Momshouse`,
                 start_url: `/`,
                 background_color: `#663399`,
                 theme_color: `#663399`,
                 display: `minimal-ui`,
-                // TODO: TradeWindow icon
+                // TODO: Momshouse icon
                 icon: `src/images/momshouse-ico.png`,
             },
         },
@@ -74,6 +74,14 @@ module.exports = {
             options: {
                 fonts: [`Poppins:wght@400;700`,`Lobster:wght@400;700`],
                 display: 'swap',
+            },
+        },
+        {
+            resolve: "gatsby-plugin-google-tagmanager",
+            options: {
+                id: "GTM-KGW6SGX",          
+                // Defaults to false only be loaded in production.
+                includeInDevelopment: false
             },
         },
         // this (optional) plugin enables

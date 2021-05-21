@@ -17,7 +17,6 @@ const PageSectionTag = styled(PageSection)`
     }
 `;
 const SectionWrapperTag = styled(SectionWrapper)`
-    background: #f7f7f7;
     border-radius: 4px;
 `;
 const HeaderTitle = styled.h4`
