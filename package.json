@@ -1,6 +1,6 @@
 {
   "name": "@tw/website-frontend",
-  "description": "TradeWindow website",
+  "description": "Momshouse website",
   "version": "1.0.0",
   "dependencies": {
     "@emotion/react": "^11.1.2",
@@ -10,6 +10,7 @@
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-emotion": "^5.0.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-google-tagmanager": "^3.5.0",
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-offline": "^3.4.0",
     "gatsby-plugin-react-helmet": "^3.4.0",
@@ -56,8 +57,8 @@
     "clean": "gatsby clean",
     "dev": "cross-env ENABLE_GATSBY_REFRESH_ENDPOINT=true GATSBY_HOT_LOADER=fast-refresh TW_WEBSITE_API_URL=\"http://web-cms:1331\" gatsby develop",
     "docker": "yarn docker:build && yarn docker:push",
-    "docker:build": "docker build -t tradewindowdev/web-cms:ui_$(git rev-parse --short HEAD) .",
-    "docker:push": "docker push tradewindowdev/web-cms:ui_$(git rev-parse --short HEAD)",
+    "docker:build": "docker build -t Momshousedev/web-cms:ui_$(git rev-parse --short HEAD) .",
+    "docker:push": "docker push Momshousedev/web-cms:ui_$(git rev-parse --short HEAD)",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "lint": "eslint . --ext .tsx --ext .ts",
     "serve": "gatsby serve",
