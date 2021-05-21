@@ -1,14 +1,7 @@
-import styled from '@emotion/styled';
 import { graphql, PageProps } from 'gatsby';
 import React from 'react';
-import Layout from '../../components/Layout';
 import { GqlCollection, Blog } from '../../shared/interfaces';
-import { primary_color } from '../../styled/_design';
-import {
-    ContentTag,
-    PageSection,
-    SectionWrapper,
-} from '../../components/Shared/Tags';
+import ContentDetail from '../../components/Shared/ContentDetail';
 
 export const query = graphql`
     query($slug: String!) {
@@ -16,15 +9,26 @@ export const query = graphql`
             edges {
                 node {
                     title
-                    content
+                    paragraphs {
+                        id
+                        body
+                        after_image {
+                            caption
+                            image_postion
+                            media {
+                                childImageSharp {
+                                    fluid(maxWidth: 960) {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
+                        }
+                    }
                     post_date
                 }
             }
         }
     }
-`;
-const TitleTag = styled.h2`
-    color: ${primary_color};
 `;
 
 interface Props {
@@ -35,23 +39,7 @@ const BlogPage: React.FC<PageProps<Props>> = ({ data }) => {
     const { allStrapiBlogs } = data;
     const blog = allStrapiBlogs.edges.map(x => x.node)[0];
 
-    return (
-        <Layout pageTitle={`${blog.title}`} headerStyle="white-background">
-            {' '}
-            <PageSection>
-                <SectionWrapper>
-                    <TitleTag>{blog.title}</TitleTag>
-                    {blog.content && (
-                        <ContentTag
-                            dangerouslySetInnerHTML={{
-                                __html: blog.content,
-                            }}
-                        />
-                    )}
-                </SectionWrapper>
-            </PageSection>
-        </Layout>
-    );
+    return <ContentDetail data={blog} />;
 };
 
 export default BlogPage;

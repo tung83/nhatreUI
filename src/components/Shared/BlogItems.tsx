@@ -54,11 +54,19 @@ interface Props {
 
 const BlogItems: React.FC<Props> = ({ blogs }) => {
     const latestItems = blogs.map((x: any) => {
-        const paragraphs = x.node.content && x.node.content.split('</p>');
-        const firstParagraph = paragraphs && paragraphs[0] + '</p>';
+        const contentLimit = 200;
+        const content = ellipsis(
+            (x.node.paragraphs &&
+                x.node.paragraphs[0] &&
+                x.node.paragraphs[0].body) ||
+                'TBA',
+            contentLimit,
+        );
+        // const paragraphs = x.node.content && x.node.content.split('</p>');
+        // const firstParagraph = paragraphs && paragraphs[0] + '</p>';
         return {
             ...x.node,
-            content: firstParagraph && ellipsis(firstParagraph || 'TBA', 200),
+            content,
         };
     });
     return (

@@ -7,6 +7,7 @@ module.exports = {
         id: Int
         media: File
         caption: String
+        image_postion: String
       }
     `,
 };

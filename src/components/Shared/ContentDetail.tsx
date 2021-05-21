@@ -1,11 +1,10 @@
 /* eslint-disable max-len */
 import styled from '@emotion/styled';
-import { graphql, PageProps } from 'gatsby';
 import React from 'react';
-import Layout from '../../components/Layout';
-import LazyImage from '../../components/Shared/LazyImage';
-import { PageSection, SectionWrapper } from '../../components/Shared/Tags';
-import { GqlCollection, Article, MediaExtra } from '../../shared/interfaces';
+import Layout from '../Layout';
+import LazyImage from './LazyImage';
+import { PageSection, SectionWrapper } from './Tags';
+import { MediaExtra } from '../../shared/interfaces';
 import {
     content_width,
     dark_gray,
@@ -13,32 +12,6 @@ import {
     size,
 } from '../../styled/_design';
 
-export const query = graphql`
-    query($slug: String!) {
-        allStrapiArticles(limit: 1, filter: { slug: { eq: $slug } }) {
-            edges {
-                node {
-                    title
-                    paragraphs {
-                        id
-                        body
-                        after_image {
-                            caption
-                            image_postion
-                            media {
-                                childImageSharp {
-                                    fluid(maxWidth: 960) {
-                                        ...GatsbyImageSharpFluid
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-`;
 const TitleTag = styled.h2`
     color: ${primary_color};
 `;
@@ -110,13 +83,10 @@ const ParagraphImageCaption = styled.div`
     color: ${dark_gray};
 `;
 interface Props {
-    allStrapiArticles: GqlCollection<Article>;
+    data: any;
 }
 
-const ArticlePage: React.FC<PageProps<Props>> = ({ data }) => {
-    const { allStrapiArticles } = data;
-    const article = allStrapiArticles.edges.map(x => x.node)[0];
-
+const ContentDetail: React.FC<Props> = ({ data }) => {
     const renderParagraphImage = (item?: MediaExtra) => {
         if (!item) return null;
         const { media, caption } = item;
@@ -135,17 +105,17 @@ const ArticlePage: React.FC<PageProps<Props>> = ({ data }) => {
         );
     };
     return (
-        <Layout pageTitle={`${article.title}`} headerStyle="white-background">
+        <Layout pageTitle={`${data.title}`} headerStyle="white-background">
             <PageSection>
                 <SectionWrapper>
                     <TitleTag className="d-flex justify-content-center flex-column align-items-center">
-                        {article.title}
+                        {data.title}
                     </TitleTag>
                 </SectionWrapper>
             </PageSection>
             <PageSectionTag>
                 <ParagraphSectionWrapper spacing={30}>
-                    {article.paragraphs.map((p: any) => {
+                    {data.paragraphs.map((p: any) => {
                         let paraWrapperClass = 'spacing  ';
                         let paraRowClass = ' ';
                         let colHaftClass = '';
@@ -193,4 +163,4 @@ const ArticlePage: React.FC<PageProps<Props>> = ({ data }) => {
     );
 };
 
-export default ArticlePage;
+export default ContentDetail;

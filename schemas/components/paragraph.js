@@ -7,7 +7,6 @@ module.exports = {
       type ${name} {
         id: Int
         body: String
-        before_image: ${mediaExtraType.name}
         after_image: ${mediaExtraType.name}
       }
     `,
