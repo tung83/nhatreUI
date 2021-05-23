@@ -28,8 +28,7 @@ module.exports = {
                 // eslint-disable-next-line max-len
                 apiURL: process.env.TW_WEBSITE_API_URL || `https://momshouseandbabieshouse.herokuapp.com`,
                 contentTypes: stringSplitContentTypes(
-                    process.env.TW_WEBSITE_CMS_CONTENT_TYPES ||
-                        `
+                    `
                             articles,
                             blogs
                         `,
@@ -49,13 +48,12 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Momshouse.io`,
-                short_name: `Momshouse`,
+                name: `maugiaogovap.com`,
+                short_name: `maugiaogovap`,
                 start_url: `/`,
                 background_color: `#663399`,
                 theme_color: `#663399`,
                 display: `minimal-ui`,
-                // TODO: Momshouse icon
                 icon: `src/images/momshouse-ico.png`,
             },
         },

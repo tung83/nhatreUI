@@ -162,11 +162,12 @@ const ArticlePage: React.FC<PageProps<Props>> = ({ data }) => {
                         }
                         return (
                             <div key={p.id} className={paraWrapperClass}>
+                                {p.body}
                                 <div className={paraRowClass}>
                                     <p
                                         className={`body-16-all ${colHaftClass} content-inner`}
                                         dangerouslySetInnerHTML={{
-                                            __html: p.body || '',
+                                            __html: p.body,
                                         }}
                                     />
                                     {p.after_image && (

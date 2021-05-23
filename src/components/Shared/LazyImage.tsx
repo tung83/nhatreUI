@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import Img from 'gatsby-plugin-image';
 import Alert from 'react-bootstrap/Alert';
 import styled from '@emotion/styled';
 import { ImageSharp } from '../../shared/interfaces';
