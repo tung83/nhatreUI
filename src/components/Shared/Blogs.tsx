@@ -71,18 +71,25 @@ const Blogs: React.FC<Props> = () => {
                             }
                         }
                         slug
-                        content
+                        paragraphs {
+                            id
+                            body
+                        }
                     }
                 }
             }
         }
     `);
     const latestItems = latestBlogs.edges.map((x: any) => {
-        const paragraphs = x.node.content && x.node.content.split('</p>');
-        const firstParagraph = paragraphs && paragraphs[0] + '</p>';
         return {
             ...x.node,
-            content: firstParagraph && ellipsis(firstParagraph || 'TBA', 200),
+            content: ellipsis(
+                (x.node.paragraphs &&
+                    x.node.paragraphs[0] &&
+                    x.node.paragraphs[0].body) ||
+                    'TBA',
+                200,
+            ),
         };
     });
     return (

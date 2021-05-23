@@ -40,7 +40,10 @@ const HomeMontessori: React.FC<Props> = () => {
                         id
                         title
                         slug
-                        content
+                        paragraphs {
+                            id
+                            body
+                        }
                         thumbnail {
                             childImageSharp {
                                 fluid {

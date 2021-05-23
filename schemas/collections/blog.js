@@ -9,6 +9,8 @@ module.exports = {
     def: `
       type ${name} implements Node @infer {
         title: String
+        slug: String
+        thumbnail: File
         paragraphs: [${paragraphType.name}]
         post_date: Date
         in_home: Boolean
