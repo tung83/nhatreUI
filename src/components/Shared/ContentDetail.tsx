@@ -132,6 +132,12 @@ const ContentDetail: React.FC<Props> = ({ data }) => {
                         }
                         return (
                             <div key={p.id} className={paraWrapperClass}>
+                                <p
+                                    style={{ display: 'none' }}
+                                    dangerouslySetInnerHTML={{
+                                        __html: p.body || '',
+                                    }}
+                                />
                                 <div className={paraRowClass}>
                                     <p
                                         className={`body-16-all ${colHaftClass} content-inner`}

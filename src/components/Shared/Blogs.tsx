@@ -108,6 +108,12 @@ const Blogs: React.FC<Props> = () => {
                                             <LazyImage src={item.thumbnail} />
                                         </NewsItemImage>
                                     )}
+                                    <p
+                                        style={{ display: 'none' }}
+                                        dangerouslySetInnerHTML={{
+                                            __html: item.content,
+                                        }}
+                                    />
                                     <NewsItemParagraphs
                                         className="body-16-all"
                                         dangerouslySetInnerHTML={{
