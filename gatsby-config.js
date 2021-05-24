@@ -49,8 +49,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Momshouse.io`,
-                short_name: `Momshouse`,
+                name: `maugiaogovap.com`,
+                short_name: `maugiaogovap`,
                 start_url: `/`,
                 background_color: `#663399`,
                 theme_color: `#663399`,
