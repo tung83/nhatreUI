@@ -61,7 +61,15 @@ const renderLinkInner = (node: NavNode) => {
     const { item } = node;
     return (
         <span id={node.name}>
-            {item.icon && <LazyImage src={item.icon} variant="fixedMobile" />}
+            {item.svg ? (
+                <span
+                    dangerouslySetInnerHTML={{
+                        __html: item.svg,
+                    }}
+                ></span>
+            ) : (
+                item.icon && <LazyImage src={item.icon} variant="fixed" />
+            )}
             {renderPlaceholder(item.title)}
         </span>
     );

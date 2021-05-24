@@ -50,7 +50,7 @@ export const text_light_grey_color = black_200;
 export const text_primary_color = primary_color;
 
 /* Layout */
-export const menu_height = 80;
+export const menu_height = 70;
 export const content_width = 1380;
 export const fullscreen_width = 1920;
 export const menu_shadow = `0px 0px 20px 6px rgba(0, 0, 0, 0.1)`;

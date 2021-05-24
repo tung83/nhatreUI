@@ -11,6 +11,7 @@ import {
     black_500,
     content_width,
     menu_shadow,
+    primary_color,
     size,
     white_500,
 } from '../styled/_design';
@@ -47,12 +48,12 @@ const Wrapper = styled.header`
         .navbar-dark .navbar-toggler .icon-bar {
             background-color: ${white_500};
         }
-        .menu-item svg path {
-            fill: ${white_500};
-        }
         .icon-bar {
             background-color: ${white_500};
         }
+    }
+    .menu-item svg path {
+        fill: ${primary_color};
     }
     .menu-floating {
         border-radius: 5px;
@@ -60,7 +61,9 @@ const Wrapper = styled.header`
         background-color: ${white_500};
         a:not(.btn),
         .menu-item svg {
-            color: ${black_500};
+            path {
+                fill: ${primary_color};
+            }
         }
         box-shadow: ${menu_shadow};
         @media (min-width: ${size.sm}) {
@@ -87,12 +90,10 @@ const Header: React.FC<Props> = ({ headerStyle }) => {
                         id
                         title
                         link
+                        svg
                         icon {
                             childImageSharp {
-                                fixed(height: 32) {
-                                    ...GatsbyImageSharpFixed
-                                }
-                                fixedMobile: fixed(height: 24) {
+                                fixed(height: 20) {
                                     ...GatsbyImageSharpFixed
                                 }
                             }
@@ -115,13 +116,11 @@ const Header: React.FC<Props> = ({ headerStyle }) => {
                         id
                         title
                         link
+                        svg
                         enabled
                         icon {
                             childImageSharp {
-                                fixed(height: 32) {
-                                    ...GatsbyImageSharpFixed
-                                }
-                                fixedMobile: fixed(height: 24) {
+                                fixed(height: 20) {
                                     ...GatsbyImageSharpFixed
                                 }
                             }

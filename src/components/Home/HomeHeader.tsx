@@ -34,11 +34,15 @@ export const Image = styled.div`
     top: 0px;
     max-width: none;
     overflow: hidden;
-    border-radius: 5px;
+    @media (min-width: ${size.sm}) {
+        border-radius: 5px;
+    }
 `;
 export const SectionWrapperTag = styled(SectionWrapper)`
     background: #f7f7f7;
-    border-radius: 4px;
+    @media (min-width: ${size.sm}) {
+        border-radius: 5px;
+    }
 `;
 export const ImageTitle = styled.div`
     position: absolute;

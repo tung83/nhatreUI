@@ -60,6 +60,7 @@ const ExtraLinkWrapperTag = styled.span`
 `;
 const SubMenuTag = styled.li`
     list-style-type: none;
+    text-align: center;
     flex-grow: 1;
     font-weight: 500;
     line-height: 24px;
@@ -150,6 +151,7 @@ const MobileBottomFooter = () => {
                                 target="_blank"
                             >
                                 <SvgSocialNode />
+                                <div className="pt-1">{node.name}</div>
                             </a>
                         </SubMenuTag>
                     );
