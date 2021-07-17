@@ -6,6 +6,7 @@ module.exports = {
     def: `
       type ${name} {
         id: Int
+        heading: String
         body: String
         after_image: ${mediaExtraType.name}
       }

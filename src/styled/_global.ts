@@ -8,7 +8,9 @@ import {
     text_black_color,
     text_grey_color,
 } from './_design';
-
+// eslint-disable-next-line max-len
+// https://www.templatemonsterpreview.com/demo/86052.html?utm_campaign=buttonmonsterone&utm_source=colorlib&utm_medium=referral&aff=colorlib
+// https://hookagency.com/blog/website-color-schemes/
 export default css`
     // Reset HTML editor content
     p {
@@ -27,7 +29,7 @@ export default css`
         color: ${text_black_color};
         background: #fff;
         height: 100%;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: ${base_font_size};
         }
     }
@@ -48,6 +50,9 @@ export default css`
             text-decoration: none;
             color: ${primary_color};
         }
+    }
+    .lazy-image-wrapper .gatsby-image-wrapper {
+        border-radius: 5px;
     }
     .nav-tabs .nav-item.active {
         text-decoration: none;
@@ -154,70 +159,74 @@ export default css`
     }
     .label-12 {
         font-size: 0.75rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 0.6rem;
         }
     }
     // body 16 in desktop; body 12 in mobile
     .body-16 {
         font-size: 0.75rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 0.8rem;
         }
     }
     // body 16 in both
     .body-16-all {
         font-size: 1rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 0.8rem;
         }
     }
     // body 20 in desktop; body 16 in mobile
     .body-20 {
         font-size: 1rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 1rem;
         }
     }
     // body 24 in desktop; body 16 in mobile
     .body-24 {
         font-size: 1rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 1.2rem;
         }
     }
     // body 32 in desktop; body 16 in mobile
     .body-32 {
         font-size: 1rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 1.6rem;
         }
     }
     // heading 1 in desktop; heading 3 in mobile
     .heading-1-m24 {
         font-size: 2.5rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 3.6rem;
         }
     }
     // heading 1 in desktop; heading 3 in mobile
     .heading-1 {
         font-size: 2rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 3.6rem;
         }
     }
     // heading 2 in desktop; heading 3 in mobile
     .heading-2 {
+        font-family: 'Lobster', 'Poppins', Arial, Helvetica, sans-serif;
+        color: #00996d;
         font-size: 2rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 2.4rem;
         }
     }
     // heading 3 in desktop; heading 5 in mobile
     .heading-3 {
+        font-family: 'Lobster', 'Poppins', Arial, Helvetica, sans-serif;
+        color: #00996d;
         font-size: 1.25rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 1.6rem;
         }
     }
@@ -227,14 +236,14 @@ export default css`
     }
     .heading-5 {
         font-size: 0.75rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 1rem;
         }
     }
     // heading 4 in both
     .heading-4-all {
         font-size: 1.25rem;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             font-size: 1rem;
         }
     }

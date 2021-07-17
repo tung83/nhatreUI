@@ -7,23 +7,38 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import { content_width, dark_gray, size } from '../../styled/_design';
+import { content_width, dark_gray, size, yellow } from '../../styled/_design';
 import { NavNode } from '../../shared/interfaces';
 import FooterFacebookIcon from './FooterFacebookIcon.inline.svg';
+import PhoneIcon from '../Assets/PhoneIcon.inline.svg';
 
 interface Props {}
 
 const Wrapper = styled.footer`
+    background: url('/Footer_bg.jpg') bottom center no-repeat;
+    svg {
+        path {
+            fill: #fff;
+        }
+    }
+    color: #fff;
     padding: 28px 0;
+    margin-top: 20px;
     a {
+        color: #fff;
         &:hover,
         &:active,
         &:focus {
-            color: ${dark_gray};
+            color: #88bf40;
+            svg {
+                path {
+                    fill: #88bf40;
+                }
+            }
         }
     }
-    @media (min-width: ${size.sm}) {
-        padding: 111px 0 25px 0;
+    @media (min-width: ${size.md}) {
+        padding: 10px 0 10px 0;
     }
 `;
 
@@ -31,6 +46,9 @@ const MenuContainer = styled(Container)`
     max-width: ${content_width}px;
     margin: 0 auto;
     padding: 0;
+    .mobile-map {
+        flex-direction: column;
+    }
 `;
 const MobileBottomFooterWrapper = styled.div`
     display: flex;
@@ -46,7 +64,7 @@ const SocialWrapperTag = styled.div`
     li {
         padding: 0 15px;
     }
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         margin: 0;
     }
 `;
@@ -58,14 +76,63 @@ const ExtraLinkWrapperTag = styled.span`
         padding: 0 15px;
     }
 `;
+const MobileMaps = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 10px -15px;
+    .map-item {
+        &:first-of-type {
+            margin-bottom: 20px;
+        }
+        a.map {
+            height: 130px;
+            display: block;
+            min-height: 130px;
+        }
+    }
+`;
+const Maps = styled.div`
+    display: flex;
+    margin: 10px -15px;
+`;
+const AddressMap = styled.div`
+    flex: 1;
+    padding: 0 15px;
+    h3 {
+        color: ${yellow};
+    }
+    a.phone {
+        display: flex;
+        svg {
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+    a.map {
+        margin-top: 10px;
+        cursor: pointer;
+        position: relative;
+        height: 160px;
+        display: block;
+        min-height: 280px;
+    }
+    .map0 {
+        background: url('/MomsHouseMap.png') center no-repeat;
+        background-size: cover;
+    }
+    .map1 {
+        background: url('/BabiesHouseMap.png') center no-repeat;
+        background-size: cover;
+    }
+`;
 const SubMenuTag = styled.li`
     list-style-type: none;
     text-align: center;
     flex-grow: 1;
     font-weight: 500;
     line-height: 24px;
-    color: ${dark_gray};
-    @media (min-width: ${size.sm}) {
+    color: ${yellow};
+    @media (min-width: ${size.md}) {
         line-height: 1.5rem;
     }
 `;
@@ -76,6 +143,28 @@ interface SocialLink {
     link: string;
     svg: any;
 }
+interface MapLink {
+    link: string;
+    name: string;
+    phone: string;
+    address: string;
+}
+const maps: MapLink[] = [
+    {
+        name: "Moms' House",
+        address: '843/11, Nguyễn Kiệm, Gò Vấp, Hồ Chí Minh',
+        phone: '090 910 71 27',
+        link:
+            "https://www.google.com/maps/place/M%E1%BA%A7m+Non+Moms'house/@10.8196572,106.6759533,17z/data=!3m1!4b1!4m5!3m4!1s0x3175290414b2381f:0x35dd1b256192d179!8m2!3d10.8190618!4d106.6779074",
+    },
+    {
+        name: "Babies' House",
+        phone: '098 261 02 06',
+        address: '668/2 Lê Đức Thọ, Phường 15, Gò Vấp, Hồ Chí Minh',
+        link:
+            "https://www.google.com/maps/place/M%E1%BA%A7m+Non+Babies'+House/@10.8460498,106.6691213,17z/data=!3m1!4b1!4m5!3m4!1s0x317529e5f7c929e7:0x1655658916ed9540!8m2!3d10.8460018!4d106.6712586",
+    },
+];
 const socialLinks: SocialLink[] = [
     {
         id: 'facebook',
@@ -95,10 +184,30 @@ const extraPageLinks: NavNode = {
     item: { id: '', link: '' },
     children: [],
 };
-interface Props {}
-const BottomFooter: React.FC<Props> = () => {
+interface Props {
+    maps: MapLink[];
+}
+const BottomFooter: React.FC<Props> = ({ maps }) => {
     return (
         <MenuContainer>
+            <Maps>
+                {maps.map((x, index) => (
+                    <AddressMap key={index} className="map-item">
+                        <h3 className="heading-3">{x.name}</h3>
+                        <a href={`tel:${x.phone}`} className="phone">
+                            <PhoneIcon />
+                            <span>{x.phone}</span>
+                        </a>
+                        <div>{x.address}</div>
+                        <a
+                            className={`map${index} map`}
+                            href={x.link}
+                            rel="noreferrer"
+                            target="_blank"
+                        ></a>
+                    </AddressMap>
+                ))}
+            </Maps>
             <Row>
                 <Col className="d-flex">
                     <span>© Moms' House 2021</span>
@@ -140,6 +249,24 @@ const BottomFooter: React.FC<Props> = () => {
 const MobileBottomFooter = () => {
     return (
         <MobileBottomFooterWrapper>
+            <MobileMaps>
+                {maps.map((x, index) => (
+                    <AddressMap key={index} className="map-item">
+                        <h3 className="heading-3">{x.name}</h3>
+                        <a href={`tel:${x.phone}`} className="phone">
+                            <PhoneIcon />
+                            <span>{x.phone}</span>
+                        </a>
+                        <div>{x.address}</div>
+                        <a
+                            className={`map${index} map`}
+                            href={x.link}
+                            rel="noreferrer"
+                            target="_blank"
+                        ></a>
+                    </AddressMap>
+                ))}
+            </MobileMaps>
             <SocialWrapperTag>
                 {socialLinks.map((node, index: number) => {
                     const SvgSocialNode = node.svg;
@@ -158,7 +285,7 @@ const MobileBottomFooter = () => {
                 })}
             </SocialWrapperTag>
             <MobileCopyright className="body-16">
-                © Moms' House 2021
+                © Moms' House {new Date().getFullYear()}
             </MobileCopyright>
         </MobileBottomFooterWrapper>
     );
@@ -170,7 +297,7 @@ const Footer: React.FC<Props> = () => {
             <MenuContainer fluid>
                 <Row bsPrefix="d-none d-sm-block">
                     <Col>
-                        <BottomFooter />
+                        <BottomFooter maps={maps} />
                     </Col>
                 </Row>
                 <Row bsPrefix="d-sm-none d-xs-block">

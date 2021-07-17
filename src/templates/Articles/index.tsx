@@ -5,13 +5,14 @@ import ContentDetail from '../../components/Shared/ContentDetail';
 import { GqlCollection, Article } from '../../shared/interfaces';
 
 export const query = graphql`
-    query ($slug: String!) {
+    query($slug: String!) {
         allStrapiArticles(limit: 1, filter: { slug: { eq: $slug } }) {
             edges {
                 node {
                     title
                     paragraphs {
                         id
+                        heading
                         body
                         after_image {
                             caption

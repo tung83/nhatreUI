@@ -18,7 +18,7 @@ interface Props {
 
 const Main = styled.main`
     padding-top: 40px;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         padding-top: ${menu_height}px;
     }
 `;

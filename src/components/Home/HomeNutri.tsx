@@ -12,7 +12,7 @@ interface Props {}
 
 const PageSectionTag = styled(PageSection)`
     padding: 5px 0;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         padding: 10px 0;
     }
 `;

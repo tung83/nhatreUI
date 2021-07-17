@@ -15,7 +15,7 @@ interface Props {
 
 const PageSectionTag = styled(PageSection)`
     padding: 5px 0;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         padding: 10px 0;
     }
 `;
@@ -34,13 +34,13 @@ export const Image = styled.div`
     top: 0px;
     max-width: none;
     overflow: hidden;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         border-radius: 5px;
     }
 `;
 export const SectionWrapperTag = styled(SectionWrapper)`
     background: #f7f7f7;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         border-radius: 5px;
     }
 `;
@@ -55,7 +55,7 @@ export const ImageTitle = styled.div`
     background-color: ${primary_color};
     color: #fff;
     margin: 0 15px;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         margin: 0;
     }
 `;

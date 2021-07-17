@@ -75,7 +75,7 @@ const renderLinkInner = (node: NavNode) => {
     );
 };
 
-const FullNavMenu: React.FC<Props> = ({ data }) => {
+const FullNavMenu: React.FC<Props> = ({ data, children }) => {
     if (!data) {
         return null;
     }
@@ -164,7 +164,15 @@ const FullNavMenu: React.FC<Props> = ({ data }) => {
         <div onMouseLeave={() => onMouseLeave()}>
             <MenuContainer>
                 <MenuSection>{left && left.map(renderMenuItem)}</MenuSection>
-                <MenuSection>{right && right.map(renderMenuItem)}</MenuSection>
+                <div
+                    className="d-flex 
+                        justify-content-center align-items-center"
+                >
+                    <MenuSection>
+                        {right && right.map(renderMenuItem)}
+                    </MenuSection>
+                    {children}
+                </div>
             </MenuContainer>
             <FullNavMenuMega
                 show={showMega}

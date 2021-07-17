@@ -11,13 +11,13 @@ const PageSectionTag = styled(PageSection)`
     position: relative;
     background-color: #e6ecfc;
     background-image: url('/footer-bg.svg');
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         padding: 130px 0 106px 0px;
     }
 `;
 const SectionWrapperTag = styled(SectionWrapper)`
     max-width: 290px;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         max-width: ${content_width}px;
         display: flex;
         align-items: center;
@@ -34,7 +34,7 @@ const TitleText = styled.h2`
 const BodyTag = styled.div`
     color: ${dark_gray};
     margin-top: 2px;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         max-width: 821px;
         margin-top: 16px;
         .text-highlight {
@@ -47,14 +47,14 @@ const DemoButtton = styled(Button)`
     width: 149px;
     margin: 40px 0 0;
     position: relative;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         width: 176px;
         margin: 20px;
     }
 `;
 const DemoButtonWrapper = styled.div`
     text-align: right;
-    @media (min-width: ${size.sm}) {
+    @media (min-width: ${size.md}) {
         text-align: left;
     }
 `;
@@ -68,7 +68,7 @@ const BackgroundImageTag = styled.div`
         right: 28px;
         width: 246px;
         height: 140px;
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             background-image: url('/footer-person-pointing.svg');
             width: 427px;
             height: 209px;

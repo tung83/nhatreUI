@@ -40,10 +40,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
     if (data) {
         const { articles, blogs } = data;
-        createArticlePages(
-            articles.edges.map(x => x.node),
-            createPage,
-        );
+        // eslint-disable-next-line no-console
+        console.log(articles);
+        // createArticlePages(
+        //     articles.edges.map(x => x.node),
+        //     createPage,
+        // );
 
         createBlogPages(
             blogs.edges.map(x => x.node.slug),

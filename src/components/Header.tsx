@@ -16,6 +16,7 @@ import {
     white_500,
 } from '../styled/_design';
 import useScroll from '../hooks/useScroll';
+import SocialLinks from './Footer/SocialLinks';
 
 interface Props {
     headerStyle?: string;
@@ -66,14 +67,14 @@ const Wrapper = styled.header`
             }
         }
         box-shadow: ${menu_shadow};
-        @media (min-width: ${size.sm}) {
+        @media (min-width: ${size.md}) {
             margin-top: 20px;
         }
     }
 `;
 
 const MenuContainer = styled(Container)`
-    max-width: ${content_width}px;
+    max-width: calc(${content_width}px - 32px);
     margin: 0 auto;
     padding: 0;
 `;
@@ -143,12 +144,14 @@ const Header: React.FC<Props> = ({ headerStyle }) => {
     return (
         <Wrapper>
             <MenuContainer fluid className={wrapperClass}>
-                <Row bsPrefix="d-none d-sm-block">
+                <Row bsPrefix="d-none d-lg-block">
                     <Col>
-                        <FullNavMenu data={strapiTopMenu} />
+                        <FullNavMenu data={strapiTopMenu}>
+                            <SocialLinks />
+                        </FullNavMenu>
                     </Col>
                 </Row>
-                <Row bsPrefix="d-sm-none d-xs-block">
+                <Row bsPrefix="d-lg-none d-xs-block">
                     <CompactNavMenu data={strapiTopMenu} />
                 </Row>
             </MenuContainer>

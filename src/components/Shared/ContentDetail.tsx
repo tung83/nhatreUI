@@ -21,7 +21,7 @@ interface ParagraphProps {
 }
 const colPadding = 15;
 const PageSectionTag = styled(PageSection)`
-    @media (min-width: ${size.lg}) {
+    @media (min-width: ${size.md}) {
         padding: 80px 0 130px 0;
     }
 `;
@@ -39,7 +39,7 @@ const ParagraphSectionWrapper = styled.div<ParagraphProps>`
         margin: 0 auto;
     }
     .paragrahp-row {
-        @media (min-width: ${size.lg}) {
+        @media (min-width: ${size.md}) {
             width: 100%;
             margin-right: -${colPadding}px;
             margin-left: -${colPadding}px;
@@ -47,7 +47,7 @@ const ParagraphSectionWrapper = styled.div<ParagraphProps>`
     }
     .image-container {
         width: 100%;
-        @media (min-width: ${size.lg}) {
+        @media (min-width: ${size.md}) {
             width: auto;
         }
     }
@@ -55,13 +55,13 @@ const ParagraphSectionWrapper = styled.div<ParagraphProps>`
         width: 100vw;
         margin-right: -15px;
         margin-left: -15px;
-        @media (min-width: ${size.lg}) {
+        @media (min-width: ${size.md}) {
             margin-right: 0;
             margin-left: 0;
         }
     }
     .col-half {
-        @media (min-width: ${size.lg}) {
+        @media (min-width: ${size.md}) {
             flex: 0 0 50%;
             padding-right: ${colPadding}px;
             padding-left: ${colPadding}px;

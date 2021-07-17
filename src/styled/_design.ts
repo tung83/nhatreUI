@@ -39,7 +39,8 @@ export const data_blue = '#9dc3e5';
 export const light_gray = '#dadada';
 export const dark_gray = '#6c6c6c';
 
-export const primary_color = '#88bf40';
+export const primary_color = '#00996d';
+export const yellow = '#F1B24A';
 export const primary_color_light = indigo_200;
 export const primary_color_dark = indigo_600;
 
@@ -48,10 +49,9 @@ export const text_white_color = white_500;
 export const text_grey_color = black_300;
 export const text_light_grey_color = black_200;
 export const text_primary_color = primary_color;
-
 /* Layout */
 export const menu_height = 70;
-export const content_width = 1380;
+export const content_width = 1412;
 export const fullscreen_width = 1920;
 export const menu_shadow = `0px 0px 20px 6px rgba(0, 0, 0, 0.1)`;
 export const card_shadow = `0px 0px 20px 2px rgba(0, 0, 0, 0.1)`;

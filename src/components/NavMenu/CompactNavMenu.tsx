@@ -213,7 +213,7 @@ const renderTopMenuItems = (
 ) => (
     <ul className="menu-list">
         {items.map((menu: NavNode, index: number) => {
-            return index === 0 ? null : (
+            return index === 0 || !menu.item?.enabled ? null : (
                 <li
                     key={menu.id}
                     className="menu-item-button"
@@ -269,20 +269,22 @@ const MenuBody = styled.div`
 `;
 const renderSubMenuItem = (item: NavItem) => {
     return (
-        <Link className="sub-menu-item-text" to={item.link}>
-            {item.svg && (
-                <MenuIcon
-                    size={36}
-                    dangerouslySetInnerHTML={{
-                        __html: item.svg || '',
-                    }}
-                ></MenuIcon>
-            )}
-            <MenuBody>
-                <strong>{item.title}</strong>
-                <p>{item.subTitle}</p>
-            </MenuBody>
-        </Link>
+        item.enabled && (
+            <Link className="sub-menu-item-text" to={item.link}>
+                {item.svg && (
+                    <MenuIcon
+                        size={36}
+                        dangerouslySetInnerHTML={{
+                            __html: item.svg || '',
+                        }}
+                    ></MenuIcon>
+                )}
+                <MenuBody>
+                    <strong>{item.title}</strong>
+                    <p>{item.subTitle}</p>
+                </MenuBody>
+            </Link>
+        )
     );
 };
 const renderSubMenuItems = (items: NavItem[] | undefined) => {
@@ -293,18 +295,21 @@ const renderSubMenuItems = (items: NavItem[] | undefined) => {
     ) {
         return (
             <ul className="sub-menu-list">
-                {items.map((menu: NavItem) => (
-                    <li
-                        key={menu.id}
-                        className="menu-item-button"
-                        tabIndex={-1}
-                        role="button"
-                        aria-disabled="false"
-                    >
-                        {renderSubMenuItem(menu)}
-                        <span className="menu-touch-ripple"></span>
-                    </li>
-                ))}
+                {items.map(
+                    (menu: NavItem) =>
+                        menu.enabled && (
+                            <li
+                                key={menu.id}
+                                className="menu-item-button"
+                                tabIndex={-1}
+                                role="button"
+                                aria-disabled="false"
+                            >
+                                {renderSubMenuItem(menu)}
+                                <span className="menu-touch-ripple"></span>
+                            </li>
+                        ),
+                )}
             </ul>
         );
     }
