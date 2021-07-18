@@ -104,9 +104,10 @@ const AddressMap = styled.div`
     }
     a.phone {
         display: flex;
+        align-items: center;
         svg {
             width: 20px;
-            margin-right: 10px;
+            margin-right: 7px;
         }
     }
     a.map {

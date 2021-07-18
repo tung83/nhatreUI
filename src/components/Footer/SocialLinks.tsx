@@ -31,6 +31,11 @@ const SubMenuTag = styled.li`
     line-height: 14px;
     color: ${yellow};
     a {
+        svg {
+            path {
+                fill: ${primary_color};
+            }
+        }
         color: #000;
         font-weight: 700;
         &:hover {
@@ -39,6 +44,7 @@ const SubMenuTag = styled.li`
     }
     a {
         display: flex;
+        align-items: center;
         svg {
             width: 12px;
             margin-right: 5px;
