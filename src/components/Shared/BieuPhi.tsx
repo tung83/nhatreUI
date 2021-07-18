@@ -155,7 +155,7 @@ const ListRows: React.FC<Props> = () => {
                                     <div className="li-hocphi">
                                         Phí cơ sở vật chất:
                                     </div>
-                                    4.500.000đ/năm.
+                                    3.000.000đ/năm.
                                 </div>
                             </li>
                             <li>
@@ -189,10 +189,10 @@ const ListRows: React.FC<Props> = () => {
                                             Học phí
                                         </div>
                                         <div className="table-cell">
-                                            6.200.000 đồng/tháng
+                                            6.100.000 đồng/tháng
                                         </div>
                                         <div className="table-cell">
-                                            6.100.000 đồng/tháng
+                                            5.700.000 đồng/tháng
                                         </div>
                                     </div>
                                     <div className="table-column big-column">
