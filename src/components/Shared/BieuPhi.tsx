@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { PageSection, SectionWrapper } from './Tags';
-import { size } from '../../styled/_design';
+import { base_font_size, size } from '../../styled/_design';
 
 interface Props {}
 
@@ -14,6 +14,10 @@ const PageSectionTag = styled(PageSection)`
         flex-direction: column;
         justify-content: flex-start;
         flex-wrap: wrap;
+        font-size: 15px;
+        ol {
+            padding: 0 5px 0 16px;
+        }
     }
     .hocphi-truong {
         flex-direction: column;
@@ -59,7 +63,7 @@ const PageSectionTag = styled(PageSection)`
             max-width: 240px;
         }
         .cell-big {
-            min-height: 114px;
+            min-height: 106px;
         }
     }
     .hocphi-giam {
@@ -98,6 +102,10 @@ const PageSectionTag = styled(PageSection)`
         .hocphi-truong-wrapper {
             flex-direction: row;
             justify-content: space-around;
+            font-size: ${base_font_size};
+            ol {
+                padding: 0 5px 0 40px;
+            }
         }
         .hocphi-truong {
             li > div {
