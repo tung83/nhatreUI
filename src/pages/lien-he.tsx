@@ -81,6 +81,9 @@ const AddressMap = styled.div`
     img {
         min-width: 50%;
     }
+    div {
+        text-align: center;
+    }
 `;
 
 interface SocialLink {

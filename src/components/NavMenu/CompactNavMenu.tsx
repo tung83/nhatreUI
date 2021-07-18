@@ -480,7 +480,10 @@ const CompactNavMenu: React.FC<Props> = ({ data, children }) => {
                     show={show}
                     dialogClassName="custom-modal"
                 >
-                    <MobileMenuList show={show} items={data.left} />
+                    <MobileMenuList
+                        show={show}
+                        items={[...data.left, ...data.right]}
+                    />
                 </ModalTag>
             </NavTag>
         </MenuContainer>
