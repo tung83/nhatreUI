@@ -1,5 +1,5 @@
 export const base_font_size = '20px';
-export const mobile_base_font_size = '16px';
+export const mobile_base_font_size = '20px';
 export const black_50 = '#eaeaf1';
 export const black_100 = '#e2e1ed';
 export const black_200 = '#afb4c4';

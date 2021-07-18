@@ -216,7 +216,7 @@ export default css`
     .heading-2 {
         font-family: 'Lobster', 'Poppins', Arial, Helvetica, sans-serif;
         color: #00996d;
-        font-size: 2rem;
+        font-size: 2.5rem;
         @media (min-width: ${size.md}) {
             font-size: 2.4rem;
         }
@@ -225,14 +225,14 @@ export default css`
     .heading-3 {
         font-family: 'Lobster', 'Poppins', Arial, Helvetica, sans-serif;
         color: #00996d;
-        font-size: 1.25rem;
+        font-size: 2rem;
         @media (min-width: ${size.md}) {
             font-size: 1.6rem;
         }
     }
     // heading 4 in desktop; body 16 in mobile
     .heading-4 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .heading-5 {
         font-size: 0.75rem;

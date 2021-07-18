@@ -451,8 +451,7 @@ const MobileMenuList: React.FC<MobileMenuProps> = ({ show, items }) => {
 interface Props {
     data: MenuData;
 }
-
-const CompactNavMenu: React.FC<Props> = ({ data }) => {
+const CompactNavMenu: React.FC<Props> = ({ data, children }) => {
     if (!data) {
         return null;
     }
@@ -463,6 +462,7 @@ const CompactNavMenu: React.FC<Props> = ({ data }) => {
         <MenuContainer>
             <NavTag className="navbar navbar-dark menu-item">
                 {renderLogo(data.left[0])}
+                {children}
                 <button
                     onClick={() => setShow(!show)}
                     className="navbar-toggler collapsed"

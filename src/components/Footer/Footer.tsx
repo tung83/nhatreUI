@@ -15,6 +15,7 @@ import PhoneIcon from '../Assets/PhoneIcon.inline.svg';
 interface Props {}
 
 const Wrapper = styled.footer`
+    font-size: 16px;
     background: url('/Footer_bg.jpg') bottom center no-repeat;
     svg {
         path {
@@ -153,13 +154,13 @@ const maps: MapLink[] = [
     {
         name: "Moms' House",
         address: '843/11, Nguyễn Kiệm, Gò Vấp, Hồ Chí Minh',
-        phone: '090 910 71 27',
+        phone: '098 261 02 06',
         link:
             "https://www.google.com/maps/place/M%E1%BA%A7m+Non+Moms'house/@10.8196572,106.6759533,17z/data=!3m1!4b1!4m5!3m4!1s0x3175290414b2381f:0x35dd1b256192d179!8m2!3d10.8190618!4d106.6779074",
     },
     {
         name: "Babies' House",
-        phone: '098 261 02 06',
+        phone: '090 910 71 27',
         address: '668/2 Lê Đức Thọ, Phường 15, Gò Vấp, Hồ Chí Minh',
         link:
             "https://www.google.com/maps/place/M%E1%BA%A7m+Non+Babies'+House/@10.8460498,106.6691213,17z/data=!3m1!4b1!4m5!3m4!1s0x317529e5f7c929e7:0x1655658916ed9540!8m2!3d10.8460018!4d106.6712586",

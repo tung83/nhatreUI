@@ -152,7 +152,9 @@ const Header: React.FC<Props> = ({ headerStyle }) => {
                     </Col>
                 </Row>
                 <Row bsPrefix="d-lg-none d-xs-block">
-                    <CompactNavMenu data={strapiTopMenu} />
+                    <CompactNavMenu data={strapiTopMenu}>
+                        <SocialLinks />
+                    </CompactNavMenu>
                 </Row>
             </MenuContainer>
         </Wrapper>
