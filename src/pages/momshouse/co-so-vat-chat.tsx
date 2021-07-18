@@ -53,7 +53,7 @@ const csvcMom = {
 const HomePage = () => {
     return (
         <Layout
-            pageTitle="Cơ sở vập chất Moms' House - Trường song ngữ theo phương pháp montessori chất lượng tại Gò Vấp"
+            pageTitle="Cơ sở vập chất Moms' House - Trường mẫu giáo Montessori tại Gò Vấp"
             headerStyle="white-background"
         >
             <ListImages

@@ -7,7 +7,7 @@ import TextImageAside from '../../components/Shared/TextImageAside';
 const HomePage = () => {
     return (
         <Layout
-            pageTitle="Đội ngũ nhân sự - Trường song ngữ theo phương pháp montessori chất lượng tại Gò Vấp"
+            pageTitle="Đội ngũ nhân sự - Trường mẫu giáo Montessori tại Gò Vấp"
             headerStyle="white-background"
         >
             {/* <HomeHeader header={strapiPageHome.header} /> */}

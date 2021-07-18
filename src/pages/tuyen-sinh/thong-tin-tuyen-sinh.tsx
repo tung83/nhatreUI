@@ -67,7 +67,7 @@ const tuyensinh = {
 const HomePage = () => {
     return (
         <Layout
-            pageTitle="Tuyển sinh - Trường song ngữ theo phương pháp montessori chất lượng tại Gò Vấp"
+            pageTitle="Tuyển sinh - Trường mẫu giáo Montessori tại Gò Vấp"
             headerStyle="white-background"
         >
             <ListRows

@@ -178,7 +178,7 @@ const BottomFooter: React.FC<Props> = ({ maps }) => {
 const LienHe: React.FC<Props> = () => {
     return (
         <Layout
-            pageTitle="Liên hệ - Trường song ngữ theo phương pháp montessori chất lượng tại Gò Vấp"
+            pageTitle="Liên hệ - Trường mẫu giáo Montessori tại Gò Vấp"
             headerStyle="white-background"
         >
             <PageSectionTag>

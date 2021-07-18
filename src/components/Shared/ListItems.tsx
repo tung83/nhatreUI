@@ -78,6 +78,7 @@ const ListItems: React.FC<Props> = ({
                             key={`${keyText}-${index}`}
                         >
                             <img
+                                title="Trường mẫu giáo Montessori tại Gò Vấp"
                                 className="item-image"
                                 src={item.icon}
                                 alt={item.icon}

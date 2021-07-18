@@ -64,7 +64,7 @@ const dinhduong = {
 const HomePage = () => {
     return (
         <Layout
-            pageTitle="Chế độ dinh dưỡng - Trường song ngữ theo phương pháp montessori chất lượng tại Gò Vấp"
+            pageTitle="Chế độ dinh dưỡng - Trường mẫu giáo Montessori tại Gò Vấp"
             headerStyle="white-background"
         >
             <ListDinhDuong

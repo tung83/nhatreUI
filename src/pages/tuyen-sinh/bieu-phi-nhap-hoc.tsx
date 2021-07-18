@@ -7,7 +7,7 @@ import BieuPhi from '../../components/Shared/BieuPhi';
 const HomePage = () => {
     return (
         <Layout
-            pageTitle="Biểu phí nhập học - Trường song ngữ theo phương pháp montessori chất lượng tại Gò Vấp"
+            pageTitle="Biểu phí nhập học - Trường mẫu giáo Montessori tại Gò Vấp"
             headerStyle="white-background"
         >
             <BieuPhi />

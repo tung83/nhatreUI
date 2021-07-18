@@ -403,7 +403,7 @@ const chuongtrinh36 = {
 const HomePage = () => {
     return (
         <Layout
-            pageTitle="Trường song ngữ theo phương pháp montessori chất lượng tại Gò Vấp"
+            pageTitle="Trường mẫu giáo Montessori tại Gò Vấp"
             headerStyle="white-background"
         >
             {/* <HomeHeader header={strapiPageHome.header} /> */}

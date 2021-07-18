@@ -39,7 +39,7 @@ const giatri = {
 const HomePage = () => {
     return (
         <Layout
-            pageTitle="Giá trị cốt lõi - Trường song ngữ theo phương pháp montessori chất lượng tại Gò Vấp"
+            pageTitle="Giá trị cốt lõi - Trường mẫu giáo Montessori tại Gò Vấp"
             headerStyle="white-background"
         >
             <ListItems

@@ -48,7 +48,11 @@ const TextImageAside: React.FC<Props> = ({ heading, image, children }) => {
                         <div className="text">{children}</div>
                     </ColTag>
                     <ColTag className="image-section">
-                        <img src={image} alt={image} />
+                        <img
+                            title="Trường mẫu giáo Montessori tại Gò Vấp"
+                            src={image}
+                            alt={image}
+                        />
                     </ColTag>
                 </RowTag>
             </SectionWrapperTag>

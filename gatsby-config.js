@@ -2,10 +2,12 @@ const stringSplitContentTypes = str => str.split(/[, \n\r]/g).filter(x => !!x);
 
 module.exports = {
     siteMetadata: {
-        title: `Moms' House và Babies' House`,
+        title: `Moms'House & Babies'House`,
         // eslint-disable-next-line max-len
-        description: `momshouse, babieshouse, Moms' House và Babies' House, momshouseandbabieshouse, momshouse va babieshouse,momshousevababieshouse`,
-        author: `momshouse, babieshouse`,
+        description: `montessori go vap, momshouse, babieshouse, Moms' House, Babies' House, maugiao, govap, nhatre mon, mau giao mon, nha tre mon, \
+            montessori, montessori govap, mau giao mon govap, \
+            mau giao montessori go vap, nha tre montessori go vap`,
+        author: `momshouse, babieshouse, maugiaogovap, nhatregovap`,
     },
     plugins: [
         {

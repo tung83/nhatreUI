@@ -66,7 +66,7 @@ const dangoai = {
 const HomePage = () => {
     return (
         <Layout
-            pageTitle="Lễ hội và dã ngoại - Trường song ngữ theo phương pháp montessori chất lượng tại Gò Vấp"
+            pageTitle="Lễ hội và dã ngoại - Trường mẫu giáo Montessori tại Gò Vấp"
             headerStyle="white-background"
         >
             <ListImagesParty
