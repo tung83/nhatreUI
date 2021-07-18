@@ -56,7 +56,7 @@ const PageSectionTag = styled(PageSection)`
 const SectionWrapperTag = styled(SectionWrapper)`
     border-radius: 4px;
 `;
-const HeaderTitle = styled.h4`
+const HeaderTitle = styled.h1`
     padding: 45px 0 0 1rem;
 `;
 const SubTitle = styled.p`

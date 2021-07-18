@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { PageSection, SectionWrapper } from './Tags';
-import { base_font_size, size } from '../../styled/_design';
+import { size } from '../../styled/_design';
 
 interface Props {}
 
@@ -102,7 +102,7 @@ const PageSectionTag = styled(PageSection)`
         .hocphi-truong-wrapper {
             flex-direction: row;
             justify-content: space-around;
-            font-size: ${base_font_size};
+            font-size: 18px;
             ol {
                 padding: 0 5px 0 40px;
             }
@@ -115,7 +115,7 @@ const PageSectionTag = styled(PageSection)`
                 }
             }
             .cell-big {
-                min-height: 78px;
+                min-height: 72px;
             }
         }
     }

@@ -33,7 +33,7 @@ const PageSectionTag = styled(PageSection)`
 const SectionWrapperTag = styled(SectionWrapper)`
     border-radius: 4px;
 `;
-const HeaderTitle = styled.h4`
+const HeaderTitle = styled.h1`
     padding: 0.5rem 0 0 1rem;
 `;
 const TextImageAside: React.FC<Props> = ({ heading, image, children }) => {
