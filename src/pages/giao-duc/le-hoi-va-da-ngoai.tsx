@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 import ListImagesParty from '../../components/Shared/ListImagesParty';
 const dangoai = {
     key: 'gia-ngoai',
-    heading: 'Giã ngoại - lễ hội',
+    heading: 'Dã ngoại - lễ hội',
     subHeading:
         "<span>Trong năm học Babies’House sẽ tổ chức những lễ hội lớn cho các Bé có trải nghiệm thực tế, cụ thể có 5 lễ hội lớn: \
         Tết Cổ truyền (tháng 01); Ngày hội thể thao (tháng 3-4); Ngày hội gia đình (tháng 06); Tết Trung Thu (15/08  m Lịch); \
